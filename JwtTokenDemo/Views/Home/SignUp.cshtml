@@ -1,0 +1,86 @@
+﻿@*@model JwtTokenDemo.Models.User*@
+@model JWTTokenApi.Models.User
+@{
+    ViewData["Title"] = "Sign Up";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+<br />
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row " style="margin-left:150px;">
+            <div class="row">
+                <div class="col-lg-12  border border-primary rounded " style="background-color:saddlebrown;color:palegoldenrod; font-weight:bold; width:350px;">
+                    <form method="post" asp-action="SignUp">
+                        <div class="form-group">
+                            <label asp-for="Username"></label>
+                            <input type="text" asp-for="Username" placeholder="Enter Username" class="form-control" autocomplete="off" />
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Email"></label>
+                            <input type="text" asp-for="Email" placeholder="Enter Email" class="form-control" autocomplete="off" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Mobile"></label>
+                            <input type="text" asp-for="Mobile" placeholder="Enter Mobile Number" class="form-control" autocomplete="off" />
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label asp-for="Password"></label>
+
+                                    <input type="password" asp-for="Password" id="password" placeholder="Enter Password" class="form-control" autocomplete="off" />
+
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-success btn-lg mb-1 float-right" value="Register" />
+
+                        </div>
+                        <div class="form-group">
+                            <a class=" font-weight-bold" asp-action="LoginUser" asp-controller="Home" style="color:black">Already have an account?Login!</a>
+
+                        </div>
+                     
+                       
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="col-md-5 col-lg-8 col-xl-6" >
+                <img src="http://cdn.shopify.com/s/files/1/0561/4102/1319/products/227386819_1208242529603337_6264186201423250623_n.jpg?v=1663453659"
+                     class="img-fluid" alt="Sample image">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<style>
+    .divider:after,
+    .divider:before {
+        content: "";
+        flex: 1;
+        height: 1px;
+       /* background: #eee;*/
+    }
+</style>
+
+

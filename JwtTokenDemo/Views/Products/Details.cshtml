@@ -1,0 +1,38 @@
+﻿@*@model JwtTokenDemo.Models.Product*@
+@model JWTTokenApi.Models.Product
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row" style="background-color:palevioletred;font-style:italic;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight:bold;">
+       
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Product_Image)
+        </dt>
+        <dd class = "col-sm-10" style="margin-top:20px;">
+          <img src="@Model.Product_Image" height="200px" width="200px"  />
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Product_Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product_Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Product_Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product_Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Product_Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product_Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

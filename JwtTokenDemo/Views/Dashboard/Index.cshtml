@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000" data-pause="hover">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="carousel-content">
+                    <div style="margin: 0 auto">
+
+                        <p>
+                            <img src="https://cdn.igp.com/f_auto,q_auto,t_pnopt32prodlp/banners/all_cakes_d_igp_banner_20220920.jpg" height="450" width="100%" style="border-radius:10px;" />     
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="carousel-content">
+                    <div style="margin: 0 auto">
+
+                        <p>
+                            <img src="https://cdn.igp.com/f_auto,q_auto,t_pnopt15prodlp/banners/fresh_fruit_compote_d_igp_frames_20220920.jpg" height="450" width="100%" style="border-radius:10px;" />
+                          
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="carousel-content">
+                    <div style="margin: 0 auto">
+
+                        <p>
+                            <img src="https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/Desk-Hero-Banner-birthday_9mar.jpg" height="450" width="100%" style="border-radius:10px;" />
+                          
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only"> Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .carousel-inner {
+        width: auto;
+        /*height: 500px;*/
+    }
+
+    .carousel-content {
+       /* background-color: lightblue;*/
+        display: flex;
+        text-align: center;
+    }
+</style>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+</script>
+
+

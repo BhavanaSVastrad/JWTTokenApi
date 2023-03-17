@@ -1,0 +1,96 @@
+﻿@*@model JwtTokenDemo.Models.User*@
+@model JWTTokenApi.Models.User
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-11 col-lg-6 col-xl-5">
+                <img src="https://www.chefbakers.com/images/chef-logo.png"
+                     class="img-fluid" alt="Sample image" style="height:300px; width:350px;">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="background-color:antiquewhite;">
+                <br />
+                <form method="post" asp-action="LoginUser" asp-controller="Home">
+
+
+                    <br />
+
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label font-weight-bold" for="form3Example3" asp-for="Username" style="color:black">Username </label>
+                        <input type="text" asp-for="Username" placeholder="Enter Username" id="form3Example3" class="form-control " />
+
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                        <span asp-validation-for="Username" class="text-danger font-weight-bold"></span>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <label class="form-label font-weight-bold" for="form3Example4" asp-for="Password" style="color:black">Password</label>
+                        <input type="password" id="password" class="form-control "
+                               asp-for="Password" placeholder="Enter Password" />
+
+                        @*<i id="open" class="fa fa-eye float-right" style="margin-top:-25px; margin-right:6px; cursor:pointer;"></i>
+                            <i id="closed" class="fa fa-eye-slash  float-right" style="margin-top:-25px; margin-right:6px; display:none; cursor:pointer;"></i>*@
+
+                        <span asp-validation-for="Password" class="text-danger font-weight-bold"></span>
+                    </div>
+
+
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <input type="submit" class="btn btn-block btn-primary mb-2" style="background-color:lightcoral;color:darkblue;font-weight:bold;" value="Login" />
+                        <p style="font-weight:bolder; font-size:20px;color:darkred;">
+                            Don't have an account?   <a class="  font-weight-bold" asp-action="SignUp" asp-controller="Home" style=" color:blue">SignUp</a>
+
+                        </p>
+                        <span class="text-danger" style="color:white;font-weight:bolder;">@TempData["error"]  </span>
+                        <span class="text-danger" style="color:white;font-weight:bolder;">@TempData["errorUserPass"]  </span>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<style>
+    .divider:after,
+    .divider:before {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #eee;
+    }
+
+    .h-custom {
+        height: calc(100% - 73px);
+    }
+</style>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#open").click(function () {
+            $("#open").hide();
+            $("#closed").show();
+            $("#password").attr("type", "text");
+        });
+        $("#closed").click(function () {
+            $("#closed").hide();
+            $("#open").show();
+            $("#password").attr("type", "password");
+        });
+
+    });
+</script>
